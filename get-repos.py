@@ -1,3 +1,5 @@
+#writes a .txt file with links to all user's repositories
+
 import sys
 import requests
 from bs4 import BeautifulSoup
