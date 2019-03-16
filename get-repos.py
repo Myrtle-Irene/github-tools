@@ -27,7 +27,7 @@ if not(len(sys.argv)==2):
     print("\nusage : python get-repos.py 'username'\n")
 else:
     if(sys.argv[1]=='-h' or sys.argv[1]=='--help'):
-        print("\nusage : python gitRepo.py 'username'")
+        print("\nusage : python get-repos.py 'username'")
         print("Options and arguments (and corresponding environment variables):")
         print("-h     : print this help message and exit (also --help)\n")
     else:
