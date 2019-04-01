@@ -7,19 +7,19 @@ from bs4 import BeautifulSoup
 def getRepos(userName):
     try :
         request=requests.get("https://github.com/"+userName+"?tab=repositories")
-        soup=BeautifulSoup(request.text,"html.parser")
+        soup=BeautifulSoup(request.text, "html.parser")
         count=0
         links = []
         for i in soup.find_all("a",{"itemprop": "name codeRepository"}):
             count+=1
             links.append(repo_link)
-        print('Total Repositories :'+str(count))
+        print('Total Repositories :' + str(count))
     except Exception as exception:
         print(type(exception).__name__)
     return links
 
 def write_file(link_list):
-    filename = str('Myrtle-Irene') + '.txt'
+    filename = str(sys.argv[1]) + '.txt'
     with open(filename, 'w') as fd:
         for x in link_list:
             fd.write(x + '\n')
